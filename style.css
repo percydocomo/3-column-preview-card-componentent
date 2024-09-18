@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* ROOT */
+
+:root {
+    --primary-bright-orange: hsl(31, 77%, 52%);
+    --primary-dark-cyan: hsl(184, 100%, 22%);
+    --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --neutral-transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --neutral-very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+    --ff-lexend-deca: "Lexend Deca", sans-serif;
+    --ff-big-shoulders-display: "Big Shoulders Display", sans-serif;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERIC STYLES */
+
+body {
+    font-size: 15px;
+}
+
+h1 {
+    font-family: var(--ff-big-shoulders-display);
+    color: var(--neutral-very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+    font-size: 2.6em;
+    margin: 0.80em 0 0.67em 0;
+}
+
+p {
+    font-family: var(--ff-lexend-deca);
+    color: var(--neutral-transparent-white-paragraphs);
+    line-height: 1.65em;
+}
+
+button {
+    width: 9.8em;
+    height: 3.2em;
+    border-radius: 2em;
+    background-color: var(--neutral-very-light-gray-background-headings-buttons);
+    border: none;
+    font-size: 1em;
+    font-family: var(--ff-lexend-deca);
+    margin: 1.75em 0 0.2em 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-container {
+    width: 21.8em;
+    margin: 6em auto;
+    border-radius: 0.7em;
+    overflow: hidden; 
+}
+
+.grid-item {
+    padding: 3.21em 3.1em;
+}
+
+/* SEDANS */
+
+.sedans {
+    background-color: var(--primary-bright-orange);
+}
+
+.sedans button {
+    color: var(--primary-bright-orange);
+}
+
+/* SUVS */
+
+.suvs {
+    background-color: var(--primary-dark-cyan);
+}
+
+.suvs button {
+    color: var(--primary-dark-cyan);
+}
+
+/* LUXURY */
+
+.luxury {
+    background-color: var(--primary-very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--primary-very-dark-cyan);
+}
+
+/* ACTIVE STATE */
+
+.sedans button:hover, .suvs button:hover, .luxury button:hover {
+    border: 0.15em solid var(--neutral-very-light-gray-background-headings-buttons);
+    color: var(--neutral-very-light-gray-background-headings-buttons);
+}
+
+.sedans button:hover {
+    background-color: var(--primary-bright-orange);
+}
+
+.suvs button:hover {
+    background-color: var(--primary-dark-cyan);
+}
+
+.luxury button:hover {
+    background-color: var(--primary-very-dark-cyan);
+}
+/* FOOTER */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 927px) {
+    .card-container {
+        width: 61.4em;
+        margin: 11.4em auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1 {
+        margin: 0.77em 0 0.677em 0;
+    }
+
+    button {
+        margin: 5.55em 0 0.2em 0;
+    }
+    
+}
